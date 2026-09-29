@@ -334,9 +334,9 @@ Do not commit private keys, signing files, local properties, or credentials. See
 
 ## Team
 
-- Raúl Sánchez de Saboya — `raul.sdesaboya@upm.es`
-- Emil Stelian Pintilie — `emil.pintilie@upm.es`
-- Óscar Domínguez
+- Raúl Sánchez de Saboya — `rass08914@gmail.com`
+- Emil Stelian Pintilie — `emil.pintilie.dev@protonmail.com`
+- Óscar Domínguez - `oscardomingard@proton.me`
 - Pablo García
 
 ## License
