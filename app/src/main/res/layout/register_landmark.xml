@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_landmark"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_trading_card"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:background="#34C759"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/cardImageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/card_image"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/image_not_found" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Card ID -->
+            <EditText
+                android:id="@+id/cardId"
+                android:hint="@string/card_id"
+                android:autofillHints="postalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                android:inputType="text"
+                />
+
+            <!-- Card Name -->
+            <EditText
+                android:id="@+id/cardName"
+                android:hint="@string/card_name"
+                android:autofillHints="name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                android:inputType="text"
+                />
+
+
+            <!-- User Name (Read-only) -->
+            <EditText
+                android:id="@+id/userName"
+                android:hint="@string/user_name"
+                android:autofillHints="name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                android:inputType="text"
+                android:textColorHint="#999999"
+                />
+
+            <!-- User Email (Read-only) -->
+            <EditText
+                android:id="@+id/userEmail"
+                android:hint="@string/user_email"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#999999"
+                />
+
+            <!-- Card Price -->
+            <EditText
+                android:id="@+id/cardPrice"
+                android:hint="@string/card_price"
+                android:autofillHints="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+                />
+
+            <!-- Status Spinner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_label"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    />
+
+                <Spinner
+                    android:id="@+id/statusSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="12dp"
+                    android:entries="@array/card_status_options"
+                    />
+            </LinearLayout>
+
+            <!-- Latitude -->
+            <EditText
+                android:id="@+id/latitude"
+                android:hint="@string/latitude"
+                android:autofillHints="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#999999"
+                />
+
+            <!-- Longitude -->
+            <EditText
+                android:id="@+id/longitude"
+                android:hint="@string/longitude"
+                android:autofillHints="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#999999"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/save" />
+
+    </LinearLayout>
+</LinearLayout>

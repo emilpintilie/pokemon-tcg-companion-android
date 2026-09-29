@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme for night mode -->
+    <style name="Base.Theme.MADProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/pokemon_red_night</item>
+        <item name="colorOnPrimary">@color/pokemon_text_night</item>
+        <item name="colorPrimaryContainer">@color/pokemon_red_dark_night</item>
+
+        <item name="colorSecondary">@color/pokemon_blue_night</item>
+        <item name="colorOnSecondary">@color/pokemon_text_night</item>
+        <item name="colorSecondaryContainer">@color/pokemon_red_dark_night</item>
+
+        <!-- Fondo -->
+        <item name="android:colorBackground">@color/pokemon_background_night</item>
+        <item name="colorSurface">@color/pokemon_surface_night</item>
+        <item name="colorOnSurface">@color/pokemon_text_night</item>
+    </style>
+
+    <style name="Theme.MADProject" parent="Base.Theme.MADProject" />
+
+</resources>

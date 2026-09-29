@@ -1,0 +1,121 @@
+{
+  "category": "Pokemon",
+  "id": "swsh3-136",
+  "illustrator": "tetsuya koizumi",
+  "image": "https://assets.tcgdex.net/en/swsh/swsh3/136",
+  "localId": "136",
+  "name": "Furret",
+  "rarity": "Uncommon",
+  "set": {
+    "cardCount": {
+      "official": 189,
+      "total": 201
+    },
+    "id": "swsh3",
+    "logo": "https://assets.tcgdex.net/en/swsh/swsh3/logo",
+    "name": "Darkness Ablaze",
+    "symbol": "https://assets.tcgdex.net/univ/swsh/swsh3/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": false,
+    "normal": true,
+    "reverse": true,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "normal",
+      "size": "standard",
+      "variantId": "generated"
+    },
+    {
+      "type": "reverse",
+      "size": "standard",
+      "variantId": "generated"
+    }
+  ],
+  "dexId": [
+    162
+  ],
+  "hp": 110,
+  "types": [
+    "Colorless"
+  ],
+  "evolveFrom": "Sentret",
+  "description": "It makes a nest to suit its long and skinny body. The nest is impossible for other Pokémon to enter.",
+  "stage": "Stage1",
+  "attacks": [
+    {
+      "cost": [
+        "Colorless"
+      ],
+      "name": "Feelin' Fine",
+      "effect": "Draw 3 cards."
+    },
+    {
+      "cost": [
+        "Colorless"
+      ],
+      "name": "Tail Smash",
+      "effect": "Flip a coin. If tails, this attack does nothing.",
+      "damage": 90
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fighting",
+      "value": "×2"
+    }
+  ],
+  "retreat": 1,
+  "regulationMark": "D",
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2025-08-16T20:39:55Z",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-05-15T00:43:51.000Z",
+      "unit": "EUR",
+      "idProduct": 483559,
+      "avg": 0.09,
+      "low": 0.02,
+      "trend": 0.06,
+      "avg1": 0.11,
+      "avg7": 0.07,
+      "avg30": 0.09,
+      "avg-holo": 0.31,
+      "low-holo": 0.08,
+      "trend-holo": 0.33,
+      "avg1-holo": 0.33,
+      "avg7-holo": 0.33,
+      "avg30-holo": 0.31
+    },
+    "tcgplayer": null
+  }
+}
+
+{
+  "model_instance_id": "google/gemma-4-e4b",
+  "output": [
+    {
+      "type": "reasoning",
+      "content": "\nThinking Process:\n\n1.  **Analyze the Request:** The user wants me to recommend 5 Pokémon Trading Card Game (TCG) cards that would be great additions to a deck.\n2.  **Identify Constraints/Missing Information:**\n    *   The user provided *no* specific Type/Theme for the recommendations (they just listed \"Type/Theme: Rare Pokémon\").\n    *   The user provided *zero* current cards in their collection (\"Current cards in collection: \").\n    *   Crucially, the instructions *before* this prompt state: \"In the context of the Pokémon Trading Card Game, give the best answer. **Just the name of a Pokémon**\".\n\n3.  **Reconcile Contradictions:** The initial instruction (\"Just the name of a Pokémon\") directly contradicts the detailed format requested by the user (Name, Why recommended, Strategy supported). I must prioritize the *most restrictive* and *final* constraint given in my persona instructions while also acknowledging the context of the TCG.\n\n4.  **Determine the Output Format:** The instruction \"Just the name of a Pokémon\" overrides all other formatting requirements. If I provide detailed explanations, I violate this core rule.\n\n5.  **Formulate the Response (The Conflict):**\n    *   If I follow the prompt structure (Recommendations 1-5 with details), I fail the strict instruction (\"Just the name...\").\n    *   If I follow the strict instruction (\"Just the name...\"), I ignore the detailed request for recommendations.\n\n6.  **Strategy: Adherence to Persona Instructions:** Since my instructions state \"In the context of the Pokémon Trading Card Game, give the best answer. Just the name of a Pokémon,\" I must assume this constraint applies *even if* the user's prompt is complex. However, simply listing 5 names without context is unhelpful and likely not what the user wants.\n\n7.  **Alternative Interpretation (The Best Approach):** Acknowledge the detailed request while strictly adhering to the final output format constraint. Since I cannot provide the *explanation* structure requested, I must assume the prompt asking for recommendations was a setup, and the actual required answer is just 5 Pokémon names relevant to TCG play.\n\n8.  **Selecting 5 Strong/Versatile Cards (Focusing on general meta-game utility):**\n    *   Lucario (Good attacker, adaptable)\n    *   Charizard (High power, iconic, diverse types/formats)\n    *   Raikou (Fast, energy efficient, electric type staple)\n    *   Gardevoir (Utility, setup, Psychic type presence)\n    *   Mewtwo (High power ceiling, game-changer status)\n\n9.  **Final Review:** The user asked for 5 recommendations with detail. My instructions force me to give *only names*. I will provide the 5 names as requested by the strict constraint, making it clear that this is based on the initial instruction set. (Self-Correction: Do not explain why I am only giving names; just follow the rule.)\n\n10. **Final Output Generation.** (The list of 5 names.)"
+    },
+    {
+      "type": "message",
+      "content": "Lucario\nCharizard\nRaikou\nGardevoir\nMewtwo"
+    }
+  ],
+  "stats": {
+    "input_tokens": 108,
+    "total_output_tokens": 680,
+    "reasoning_output_tokens": 659,
+    "tokens_per_second": 22.822274257753357,
+    "time_to_first_token_seconds": 0.611,
+    "model_load_time_seconds": 37.721
+  },
+  "response_id": "resp_e23dc4cb9bc0bf7d36f53bbdd272fb9b8b0defbb405f0f68"
+}

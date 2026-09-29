@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecommendationsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Recommendations"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Server URL Configuration -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🔌 LM Studio Server URL"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <EditText
+                                android:id="@+id/serverUrlEdit"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:hint="e.g. http://10.0.2.2:1234/"
+                                android:inputType="textUri"
+                                android:textSize="12sp"
+                                android:padding="8dp" />
+
+                            <Button
+                                android:id="@+id/saveServerUrlBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Save"
+                                android:textAllCaps="false"
+                                android:padding="8dp"
+                                android:layout_marginStart="8dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/currentUrlText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Current: http://10.0.2.2:1234/"
+                            android:textSize="11sp"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card Recommendations Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🎴 Card Recommendations"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select a card type to get recommendations:"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp" />
+
+                        <Spinner
+                            android:id="@+id/cardTypeSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp" />
+
+                        <Button
+                            android:id="@+id/getCardRecommendationsBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Card Recommendations"
+                            android:textAllCaps="false" />
+
+                        <TextView
+                            android:id="@+id/cardRecommendationsText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Recommendations will appear here..."
+                            android:textSize="12sp"
+                            android:layout_marginTop="12dp"
+                            android:background="?attr/colorSurface"
+                            android:padding="8dp"
+                            android:minHeight="100dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Deck Recommendations Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🎪 Deck Recommendations"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select deck parameters:"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp" />
+
+                        <Spinner
+                            android:id="@+id/deckTypeSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                        <Spinner
+                            android:id="@+id/deckFormatSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                        <Spinner
+                            android:id="@+id/playerLevelSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp" />
+
+                        <Button
+                            android:id="@+id/getDeckRecommendationsBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Deck Recommendations"
+                            android:textAllCaps="false" />
+
+                        <TextView
+                            android:id="@+id/deckRecommendationsText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Recommendations will appear here..."
+                            android:textSize="12sp"
+                            android:layout_marginTop="12dp"
+                            android:background="?attr/colorSurface"
+                            android:padding="8dp"
+                            android:minHeight="100dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Strategy Advice Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="⚔️ Strategy Advice"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enter your key cards (comma-separated):"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp" />
+
+                        <EditText
+                            android:id="@+id/strategyCardsEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="e.g. Pikachu, Charizard, Blastoise"
+                            android:layout_marginBottom="12dp"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select opponent type:"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp" />
+
+                        <Spinner
+                            android:id="@+id/opponentTypeSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp" />
+
+                        <Button
+                            android:id="@+id/getStrategyAdviceBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Strategy Advice"
+                            android:textAllCaps="false" />
+
+                        <TextView
+                            android:id="@+id/strategyAdviceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Strategy advice will appear here..."
+                            android:textSize="12sp"
+                            android:layout_marginTop="12dp"
+                            android:background="?attr/colorSurface"
+                            android:padding="8dp"
+                            android:minHeight="100dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/botton_nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

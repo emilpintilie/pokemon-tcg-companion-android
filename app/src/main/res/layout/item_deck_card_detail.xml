@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardSlotDetail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/deck_card_unselected_bg"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageCardDetail"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/card_image"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/textCardDetailName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textCardDetailQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:layoutDirection="ltr"
+        android:showDividers="middle"
+        android:dividerPadding="12dp">
+
+        <Button
+            android:id="@+id/buttonMinus"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="@string/minus" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="@string/plus" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

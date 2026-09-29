@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- Allow cleartext (HTTP) only for local development hosts used by emulator/genymotion -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.3.2</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+
+    <!-- Keep default policy for other domains (deny cleartext) -->
+    <base-config cleartextTrafficPermitted="false" />
+
+</network-security-config>
+

@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.MADProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/pokemon_red</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorPrimaryContainer">@color/pokemon_red_dark</item>
+
+        <item name="colorSecondary">@color/pokemon_blue</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSecondaryContainer">@color/pokemon_blue_dark</item>
+
+        <!-- Fondo -->
+        <item name="android:colorBackground">@color/pokemon_background</item>
+        <item name="colorSurface">@color/pokemon_surface</item>
+        <item name="colorOnSurface">@color/black</item>
+    </style>
+
+    <style name="Theme.MADProject" parent="Base.Theme.MADProject" />
+
+</resources>

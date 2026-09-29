@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardSlot"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_margin="6dp"
+    android:background="@drawable/deck_card_unselected_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/card_image"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/textCardName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textCardState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tap_to_add"
+        android:textColor="?attr/colorOnSurface" />
+
+</LinearLayout>
+
+

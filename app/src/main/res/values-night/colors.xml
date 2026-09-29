@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pokemon_red_night">#B32A0A</color>
+    <color name="pokemon_red_dark_night">#7B1803</color>
+    <color name="pokemon_blue_night">#214C92</color>
+    <color name="pokemon_background_night">#2C2C2C</color>
+    <color name="pokemon_surface_night">#3A3A3A</color>
+    <color name="pokemon_text_night">#F5F5F5</color>
+</resources>

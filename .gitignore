@@ -1,0 +1,113 @@
+## .gitignore para proyecto Android (Gradle / Android Studio)
+# Personaliza según necesites (p. ej. si quieres versionar google-services.json, elimínalo de aquí)
+
+# ----------------
+# Android Studio / IntelliJ
+# ----------------
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# User-specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/dictionaries/
+
+# ----------------
+# Gradle
+# ----------------
+/.gradle/
+/.gradle/**
+/.gradle-cache/
+/*/build/
+/**/build/
+/build/
+
+# Gradle wrapper
+# (no duplicates)
+
+# ----------------
+# Local configuration and secrets
+# ----------------
+local.properties
+secrets.properties
+*.env
+
+# Firebase / Google services - suelen contener credenciales
+google-services.json
+
+# ----------------
+# Build outputs
+# ----------------
+*.apk
+*.ap_
+*.aab
+outputs/
+mapping.txt
+
+# ----------------
+# Native / NDK
+# ----------------
+.externalNativeBuild/
+.cxx/
+obj/
+*.so
+
+# ----------------
+# Kotlin / Java
+# ----------------
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+*.nar
+*.jnilib
+*.keystore
+*.jks
+
+# ----------------
+# IDE and OS files
+# ----------------
+.DS_Store
+Thumbs.db
+Icon
+
+# Logs
+*.log
+
+# ----------------
+# Temporary / generated
+# ----------------
+/generated/
+/gen/
+/out/
+captures/
+buildSrc/build/
+
+# Coverage
+coverage/
+*.ec
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Profiling
+*.hprof
+
+# Zip / archives
+*.zip
+
+# Misc
+*.orig
+*.rej
+
+# Keep this as a note: if has been committed already, .gitignore won't remove tracked files.
+# To stop tracking a file already committed, run:
+#   git rm --cached <file>
+# ----------------
